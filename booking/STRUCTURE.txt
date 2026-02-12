@@ -1,0 +1,38 @@
+.
+├── cmd
+│   └── api
+│       └── main.go
+├── config
+│   └── config.go
+├── delivery
+│   └── http
+│       ├── handler
+│       ├── middleware
+│       └── router.go
+├── DESIGN_PATTERNS.md
+├── docker-compose.yml
+├── domain
+│   ├── entity
+│   │   └── user.go
+│   └── repository
+│       └── user_repository.go
+├── go.mod
+├── go.sum
+├── infrastructure
+│   ├── database
+│   │   ├── postgres.go
+│   │   └── user_repository_impl.go
+│   └── observer
+│       └── event.go
+├── Makefile
+├── QUICKSTART.md
+├── README.md
+├── STRUCTURE.txt
+├── test_api.sh
+└── usecase
+    └── user
+        ├── password_strategy.go
+        ├── user_usecase.go
+        └── validation.go
+
+16 directories, 20 files
