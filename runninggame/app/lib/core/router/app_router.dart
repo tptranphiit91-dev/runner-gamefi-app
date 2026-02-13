@@ -5,6 +5,7 @@ import '../../features/auth/presentation/login_screen.dart';
 import '../../features/home/presentation/home_screen.dart';
 import '../../features/run/presentation/run_screen.dart';
 import '../../features/shop/presentation/shop_screen.dart';
+import '../../features/avatar/presentation/avatar_demo_screen.dart';
 import '../providers/auth_state_provider.dart';
 
 part 'app_router.g.dart';
@@ -51,6 +52,11 @@ GoRouter goRouter(GoRouterRef ref) {
         path: '/shop',
         name: 'shop',
         builder: (context, state) => const ShopScreen(),
+      ),
+      GoRoute(
+        path: '/avatar-demo',
+        name: 'avatar-demo',
+        builder: (context, state) => const AvatarDemoScreen(),
       ),
     ],
   );

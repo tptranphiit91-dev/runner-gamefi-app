@@ -1,5 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../core/models/user_model.dart';
+import '../../../core/providers/auth_state_provider.dart';
 import '../data/auth_repository.dart';
 
 part 'login_provider.g.dart';
@@ -21,7 +22,7 @@ class Login extends _$Login {
       password: password,
     );
     state = result['user'] as UserModel;
-    
+
     // Invalidate auth state to trigger router redirect
     ref.invalidate(authStateProvider);
   }
@@ -30,12 +31,9 @@ class Login extends _$Login {
     final authRepository = ref.read(authRepositoryProvider);
     await authRepository.logout();
     state = null;
-    
+
     // Invalidate auth state to trigger router redirect
     ref.invalidate(authStateProvider);
   }
 }
-
-// Import for authStateProvider
-import '../../../core/providers/auth_state_provider.dart';
 
